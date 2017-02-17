@@ -37,7 +37,7 @@ public class KProducer extends AbstractBase {
 		Properties newProps = new Properties();
 		newProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 		newProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-		newProps.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "com.gexin.core.SimplePartition");
+		newProps.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "com.veio.kafka.core.SimplePartition");
 		newProps.put(ProducerConfig.RETRIES_CONFIG, 3);
 		newProps.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, "gzip");
 		newProps.put(ProducerConfig.CLIENT_ID_CONFIG, getClientId());
