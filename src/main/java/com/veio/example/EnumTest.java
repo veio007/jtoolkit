@@ -32,6 +32,6 @@ public class EnumTest {
 	public static void main(String[] args) {
 		TYPE t = TYPE.valueOf(0);
 		System.out.println(t.getCode());
-		System.out.println(t.getName());
+		System.out.println(t.name());
 	}
 }

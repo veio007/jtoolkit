@@ -47,6 +47,44 @@
             <artifactId>softee</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.6.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gexin.platform</groupId>
+            <artifactId>gexin-rp-sdk-template</artifactId>
+            <version>4.0.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gexin.platform</groupId>
+            <artifactId>gexin-rp-sdk-http</artifactId>
+            <version>4.0.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gexin.platform</groupId>
+            <artifactId>gexin-rp-redis</artifactId>
+            <version>3.0.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gexin.platform</groupId>
+            <artifactId>gexin-rp-counter-api</artifactId>
+            <version>1.0.0.9</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>gexin-rp-redis</artifactId>
+                    <groupId>com.gexin.platform</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>edu.uci.ics</groupId>
+            <artifactId>crawler4j</artifactId>
+            <version>4.2</version>
+        </dependency>
     </dependencies>
 
     <build>

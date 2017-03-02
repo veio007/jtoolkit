@@ -4,6 +4,8 @@ package com.veio.example;
 import org.apache.commons.codec.binary.Base64;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+// tag 加密 解密 base64
+
 public class CodecTest {
 	public static void main(String[] args) {
 		String str = "01234567890123456789012345adfefadfefafef[954584ffdfdfdfdfdaefffffffffffffefefefefe151212fefe" +
