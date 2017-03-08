@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class BaseTest {
 	public static void main(String[] args) {
-		System.out.println(UUID.randomUUID());
+		String sdk = "4.0.0";
+		System.out.println(sdk.compareTo("3.13.0.0"));
 	}
 }

@@ -4,6 +4,7 @@ import com.gexin.rp.sdk.base.IPushResult;
 import com.gexin.rp.sdk.base.impl.SingleMessage;
 import com.gexin.rp.sdk.base.impl.Target;
 import com.gexin.rp.sdk.base.payload.APNPayload;
+import com.gexin.rp.sdk.base.payload.MultiMedia;
 import com.gexin.rp.sdk.exceptions.RequestException;
 import com.gexin.rp.sdk.http.IGtPush;
 import com.gexin.rp.sdk.template.LinkTemplate;
@@ -143,6 +144,12 @@ public class pushtoSingle {
 		msg.setTitle("title");
 		msg.setBody("body");
 		payload.setAlertMsg(msg);
+
+		payload.addMultiMedia(new MultiMedia().setResId("rid2").setResType(MultiMedia.MediaType.pic)
+					.setResUrl("http://www.getui.com/picture/2017/3/7/0eabec5296924de69c3a0f7abda81fdd.png"))
+				.addMultiMedia(new MultiMedia().setResId("rid2").setResType(MultiMedia.MediaType.audio)
+					.setResUrl("http://www.getui.com/picture/2017/3/7/0eabec5296924de69c3a0f7abda81fdd.png"));
+
 		t.setAPNInfo(payload);
 //		t.setPushInfo("actionLocKey", 1, "message", "sound", "payload",
 //				"locKey", "locArgs", "launchImage");

@@ -1,6 +1,7 @@
 package com.veio.example;
 
 // tag 加载顺序 初始化顺序 优先级
+// 静态变量会优先于静态方法执行
 
 class A {
 	private static String s = "A静态变量";
@@ -13,6 +14,10 @@ class A {
 	public A() {
 		System.out.println(v);
 		System.out.println("A构造方法");
+	}
+
+	public static void test() {
+		System.out.println(s);
 	}
 }
 
@@ -37,6 +42,7 @@ public class LoadSeqTest {
 		 * 静态变量和静态块按顺序加载，父类先于子类加载，成员变量先于构造方法执行
 		 */
 		B b = new B();
+
 	}
 
 	private static LoadSeqTest test = new LoadSeqTest();

@@ -3,6 +3,7 @@ package com.veio.spring;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.eclipse.jetty.jmx.MBeanContainer;
 import org.eclipse.jetty.server.*;
+import org.eclipse.jetty.server.handler.ErrorHandler;
 import org.eclipse.jetty.server.handler.gzip.GzipHandler;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
@@ -95,6 +96,7 @@ public class JettySpringTest {
 		WebAppContext webAppContext = new WebAppContext();
 		webAppContext.setContextPath("/");
 		webAppContext.setResourceBase("./webapp");
+		webAppContext.setErrorHandler(new ErrorHandler());
 
 		// gzip压缩
 		GzipHandler gzipHandle = new GzipHandler();
